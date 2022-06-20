@@ -12,14 +12,12 @@ public class RouteConfiguration {
     public RouteLocator gatewayRouter(RouteLocatorBuilder builder) {
         return builder
                 .routes()
-                    .route(p -> p.path("/test/**")
-                            .uri("http://httpbin.org:80"))
                     .route(p -> p.path("/currency-conversion/**")
-                            .uri("lp://currency-conversion-service/"))
+                            .uri("lb://currency-conversion-service/"))
                     .route(p -> p.path("/currency-conversion-feign/**")
-                            .uri("lp://currency-conversion-service"))
+                            .uri("lb://currency-conversion-service"))
                     .route(p -> p.path("/currency-exchange/**")
-                            .uri("lp://currency-exchange-service"))
+                            .uri("lb://currency-exchange-service"))
                 .build();
     }
 }
