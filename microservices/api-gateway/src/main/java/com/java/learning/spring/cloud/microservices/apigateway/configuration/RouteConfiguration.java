@@ -6,12 +6,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class RoutConfiguration {
+public class RouteConfiguration {
 
     @Bean
     public RouteLocator gatewayRouter(RouteLocatorBuilder builder) {
         return builder
                 .routes()
+                    .route(p -> p.path("/test/**")
+                            .uri("http://httpbin.org:80"))
                     .route(p -> p.path("/currency-conversion/**")
                             .uri("lp://currency-conversion-service/"))
                     .route(p -> p.path("/currency-conversion-feign/**")
