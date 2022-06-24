@@ -21,8 +21,12 @@
 
 # Distributed Tracing
 - Traces all HTTP calls among microservices
-- Zipkin is a server fo Microservice Tracing in distributed cloud environment
-- Sleuth is a service which collects trace details and send it to Zipkin
+- Spring Cloud Sleuth
+  - Sleuth is used to generate and attach the trace id, span id to the logs so that these can then be used by tools like Zipkin and ELK for storage and analysis
+- Zipkin 
+  - Zipkin is a distributed tracing system 
+  - It helps gather timing data needed to troubleshoot latency problems in service architectures 
+  - Features include both the collection and lookup of this data
 
 # Circuit Breaker
 - Circuit Breaker is a design pattern
