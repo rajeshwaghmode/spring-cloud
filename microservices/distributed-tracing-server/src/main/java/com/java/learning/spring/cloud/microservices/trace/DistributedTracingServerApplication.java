@@ -1,4 +1,4 @@
-package com.java.learning.spring.cloud.microservices.distributedtracingserver;
+package com.java.learning.spring.cloud.microservices.trace;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
