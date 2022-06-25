@@ -21,8 +21,14 @@
 
 # Distributed Tracing
 - Traces all HTTP calls among microservices
+- Distributed tracing helps in identifying that slow component among in the ecosystem
 - Spring Cloud Sleuth
-  - Sleuth is used to generate and attach the trace id, span id to the logs so that these can then be used by tools like Zipkin and ELK for storage and analysis
+  - It is used to generate the trace id, span id and add this information to the service calls in the headers and MDC, so that It can be used by tools like Zipkin and ELK etc. to store, index and process log files
+  - it automatically integrated to the common communication channels like
+    - requests made with the RestTemplate etc
+    - requests that pass through a Netflix Zuul microproxy
+    - HTTP headers received at Spring MVC controllers
+    - requests over messaging technologies like Apache Kafka or RabbitMQ etc
 - Zipkin 
   - Zipkin is a distributed tracing system 
   - It helps gather timing data needed to troubleshoot latency problems in service architectures 
