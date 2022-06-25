@@ -39,6 +39,13 @@
 - Is a Service Fallback mechanism for 400 - 599 HTTP Status codes
 - Hystrix is implementations of Circuit Breaker
 
+# Spring Configuration Bootstrap vs Application Properties 
+- Spring Cloud application features a bootstrap context that is the parent of the application context
+- The bootstrap context is searching for a bootstrap.properties or a bootstrap.yaml file, whereas the application context is searching for an application.properties or an application.yaml file
+- bootstrap.properties file have higher precedence and is loaded 
+- And, of course, the configuration properties of the bootstrap context load before the configuration properties of the application context
+- https://www.baeldung.com/spring-cloud-bootstrap-properties
+
 # Important URL's
 - API Gateway
   - http://localhost:8765
