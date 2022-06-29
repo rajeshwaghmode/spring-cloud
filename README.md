@@ -38,7 +38,7 @@
 # Circuit Breaker
 - Circuit Breaker is a design pattern
 - Is a Service Fallback mechanism for 400 - 599 HTTP Status codes
-- Hystrix is implementations of Circuit Breaker
+- Resilience4j, Hystrix are implementations of Circuit Breaker Pattern
 
 # Spring Configuration Bootstrap vs Application Properties 
 - Spring Cloud application features a bootstrap context that is the parent of the application context
