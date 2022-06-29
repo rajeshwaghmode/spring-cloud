@@ -37,8 +37,13 @@
 
 # Circuit Breaker
 - Circuit Breaker is a design pattern
-- Is a Service Fallback mechanism for 400 - 599 HTTP Status codes
-- Resilience4j, Hystrix are implementations of Circuit Breaker Pattern
+- The CircuitBreaker pattern functions in a similar fashion to an electrical Circuit Breaker:
+  - When a number of consecutive failures cross the defined threshold, the Circuit Breaker trips
+  - For the duration of the timeout period all requests invoking the remote service will fail immediately
+  - After the timeout expires the Circuit Breaker allows a limited number of test requests to pass through
+  - If those requests succeed the Circuit Breaker resumes normal operation
+  - Otherwise, if there is a failure the timeout period begins again
+- Resilience4j, Hystrix(not recommended as it enters Maintenance mode), Sentinal and Spring Retry are implementations of Circuit Breaker Pattern
 
 # Spring Configuration Bootstrap vs Application Properties 
 - Spring Cloud application features a bootstrap context that is the parent of the application context
