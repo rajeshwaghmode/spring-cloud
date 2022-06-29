@@ -5,10 +5,11 @@
 - Audit Configuration changes
 - Rollback Configuration
 
-# Service Registry
+# Service Registry & Discovery
 - Service Registry is a design pattern
 - Eureka is implementations of Service Registry
 - Centralized registry which keeps details about every service
+- Other implementations - Hashicorp’s Consul, Apache Zookeeper
 - Url http://localhost:8761/
 
 # API Gateway 
